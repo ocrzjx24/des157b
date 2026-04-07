@@ -287,7 +287,7 @@ section.active {
     pointer-events: auto;
 }
 
-h3 {
+h2 {
     font: 500 16px 'DM Sans', sans-serif;
     margin-bottom: 8px;
     color: var(--fg);
