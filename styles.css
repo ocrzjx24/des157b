@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+    --bg:            #f5f4f0;
+    --fg:            #111;
+    --fg-muted:      #999;
+    --dot-active:    #111;
+    --dot-border:    #111;
+    --link-hover-bg: #111;
+    --link-hover-fg: #f5f4f0;
+    --transition:    .3s ease;
+}
+
+body.switch {
+    --bg:            #050505;
+    --fg:            #f0ede8;
+    --fg-muted:      #666;
+    --dot-active:    #f0ede8;
+    --dot-border:    #f0ede8;
+    --link-hover-bg: #f0ede8;
+    --link-hover-fg: #111;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--fg);
+    font: 300 14px 'DM Sans', sans-serif;
+    letter-spacing: .01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: background var(--transition), color var(--transition);
+}
+
+/* container max size */
+#container {
+    width: 1200px;
+    height: 750px;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    background: var(--bg);
+    overflow: hidden;
+    transition: background var(--transition);
+}
+
+/* LEFT COLUMN */
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 52px 44px 44px 64px;
+    height: 750px;
+}
+
+/* banner */
+#banner {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 2px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+#banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity var(--transition);
+}
+
+/* swap logic */
+.banner-light { opacity: 1; }
+.banner-dark  { opacity: 0; }
+body.switch .banner-light { opacity: 0; }
+body.switch .banner-dark  { opacity: 1; }
+
+/* color squares (still called dots cuz originally they were circles) */
+#color-dots {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 26px;
+}
+
+.color-dot {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    transition: background var(--transition);
+}
+
+.color-dot:nth-child(1) { background: #7ab3d4; }
+.color-dot:nth-child(2) { background: #5a92c8; }
+.color-dot:nth-child(3) { background: #6a9c40; }
+.color-dot:nth-child(4) { background: #b0b840; }
+
+body.switch .color-dot:nth-child(1) { background: #32265e; }
+body.switch .color-dot:nth-child(2) { background: #523a68; }
+body.switch .color-dot:nth-child(3) { background: #ec2c4c; }
+body.switch .color-dot:nth-child(4) { background: transparent; border: 1.5px solid #ffffff; }
+
+/* name */
+h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 140px;
+    line-height: .85;
+    letter-spacing: -.02em;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+    margin-top: 20px;
+    color: var(--fg);
+    transition: color var(--transition);
+}
+
+body.switch h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 100px;
+    font-weight: 400;
+    letter-spacing: -.01em;
+}
+
+/* symbols + course info */
+#left-bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#symbols {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#symbols img,
+#symbols svg {
+    height: 50px;
+    width: auto;
+    fill: var(--fg);
+    color: var(--fg);
+    transition: fill var(--transition), color var(--transition);
+}
+
+#course-info {
+    text-align: right;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #5a92c8;
+    letter-spacing: .01em;
+    transition: color var(--transition);
+}
+
+body.switch #course-info {
+    color: #ec2c4c;
+}
+
+/* RIGHT COLUMN */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 52px 56px 44px 40px;
+    height: 750px;
+    position: relative;
+}
+
+/* pagination + switch */
+#top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+}
+
+/* switch button */
+#switch-btn {
+    background: var(--fg);
+    color: var(--bg);
+    border: none;
+    cursor: pointer;
+    font: 300 13px 'DM Sans', sans-serif;
+    letter-spacing: .06em;
+    padding: 6px 14px;
+    position: relative;
+    transition: background var(--transition), color var(--transition), opacity .2s;
+}
+
+#switch-btn:hover {
+    opacity: 0.75;
+}
+
+#switch-btn:after { display: none; }
+
+/* pagination (such a silly word i found this one thru google) */
+#pagination {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.page-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: 300 16px 'DM Sans', sans-serif;
+    letter-spacing: .05em;
+    color: var(--fg-muted);
+    min-width: 50px;
+    position: relative;
+    padding: 2px 0;
+    transition: color var(--transition);
+}
+
+.page-btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 1.5px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .2s;
+}
+
+.page-btn:hover { color: var(--fg); }
+.page-btn:hover:after { transform: scaleX(1); }
+
+/* dot indicator (for current page) */
+#page-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.page-dot {
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid var(--dot-border);
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.page-dot.active {
+    background: var(--dot-active);
+}
+
+/* section of options */
+#section-viewport {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+}
+
+section {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+    transition: opacity .22s ease;
+}
+
+section.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+h3 {
+    font: 500 16px 'DM Sans', sans-serif;
+    margin-bottom: 8px;
+    color: var(--fg);
+    transition: color var(--transition);
+}
+
+nav { margin-bottom: 20px; }
+
+nav ul,
+nav ol { list-style: none; }
+
+nav li {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 3px;
+    align-items: baseline;
+}
+
+nav li:before {
+    content: '✦';
+    font-size: 20px;
+    color: var(--fg-muted);
+    transition: color var(--transition);
+}
+
+nav a {
+    font: 300 24px 'DM Sans', sans-serif;
+    color: var(--fg-muted);
+    text-decoration: none;
+    letter-spacing: .02em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    transition: .15s;
+}
+
+nav a:hover {
+    color: var(--link-hover-fg);
+    background: var(--link-hover-bg);
+}
+
+/* DARK MODE IMAGES (idk why i chose deco, it's like decoration i guess) */
+#dark-deco {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 300px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+body.switch #dark-deco {
+    opacity: 1;
+}
+
+.deco-img {
+    position: absolute;
+    object-fit: cover;
+    display: block;
+    outline: 1.5px solid #32265e;
+}
+
+.deco-back {
+    width: 125px;
+    height: 250px;
+    bottom: 35px;
+    right: 380px;
+    z-index: 1;
+}
+
+.deco-front {
+    width: 250px;
+    height: 200px;
+    bottom: 0px;
+    right: 30px;
+    z-index: 2;
+}
+
+/* LEAVES ON LIGHT MODE */
+#leaves {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    transition: opacity var(--transition);
+}
+
+body.switch #leaves {
+    opacity: 0;
+}
+
+.leaf {
+    position: absolute;
+}
+
+.leaf-tl {
+    top: 100px;
+    left: 530px;
+    width: 240px;
+    transform-origin: top left;
+    transform: rotate(120deg);
+}
+
+.leaf-br {
+    bottom: 0px;
+    right: 100px;
+    width: 340px;
+    transform-origin: bottom right;
+    transform: rotate(-30deg);
+}
+
+/* LIGHT + DARK SYMBOLS display logic */
+.symbol-light { display: block; }
+.symbol-dark  { display: none;  }
+body.switch .symbol-light { display: none;  }
+body.switch .symbol-dark  { display: block; }

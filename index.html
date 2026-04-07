@@ -1,11 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>des157b with jason :]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DES157B Spring 2026</title>
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <h1>jason xie jason xie jason xie jason xie jaons ixje jfaon asdf</h1>
+
+    <div id="container">
+
+        <!-- left column -->
+        <header>
+
+            <div id="banner">
+                <!-- banner switches between the 2 modes -->
+                <img src="images/reyesbanner.jpg"    alt="banner" class="banner-light">
+                <img src="images/jasonbanner.jpg"     alt="banner" class="banner-dark">
+            </div>
+
+            <!-- little aesthetic color dots under the banner -->
+            <div id="color-dots">
+                <span class="color-dot"></span>
+                <span class="color-dot"></span>
+                <span class="color-dot"></span>
+                <span class="color-dot"></span>
+            </div>
+
+            <!-- name -->
+            <h1>Jason Xie</h1>
+
+            <!-- symbols + course info  -->
+            <div id="left-bottom">
+                <div id="symbols">
+                    <img src="images/star.svg"   alt="" class="symbol-light">
+                    <img src="images/crown.svg"  alt="" class="symbol-light">
+                    <img src="images/person.svg" alt="" class="symbol-light">
+
+                    <img src="images/graphy.jpg" alt="" class="symbol-dark">
+                </div>
+                <div id="course-info">
+                    des157b<br>
+                    interactive media III<br>
+                    sq26 A01
+                </div>
+            </div>
+
+        </header>
+
+        <!-- right column -->
+        <main>
+
+            <!-- pagination + switch button -->
+            <div id="top-row">
+                <div id="pagination">
+                    <button class="page-btn" id="btn-back">back</button>
+                    <div id="page-dots">
+                        <!-- the curr page indicator -->
+                        <span class="page-dot active"></span>
+                        <span class="page-dot"></span>
+                        <span class="page-dot"></span>
+                        <span class="page-dot"></span>
+                    </div>
+                    <button class="page-btn" id="btn-next">next</button>
+                </div>
+                <button id="switch-btn">switch</button>
+            </div>
+
+            <div id="section-viewport">
+
+                <section id="projects" class="active">
+                    <h3>[ministudios]</h3>
+                    <nav>
+                        <ol>
+                            <li><a href="#">Blockbuster Video</a></li>
+                            <li><a href="#">Check Yourself</a></li>
+                            <li><a href="#">Library Liberty</a></li>
+                        </ol>
+                    </nav>
+                    <h3>[toolkit]</h3>
+                    <nav>
+                        <ol>
+                            <li><a href="#">Friends List</a></li>
+                        </ol>
+                    </nav>
+                </section>
+
+                <section id="research">
+                    <h3>[research]</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Brainstorm</a></li>
+                            <li><a href="#">Comparative Analysis</a></li>
+                            <li><a href="#">Annotated Bibliography</a></li>
+                            <li><a href="#">Feasibility Report</a></li>
+                            <li><a href="#">Usability Results</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section id="development">
+                    <h3>[development]</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Proposal</a></li>
+                            <li><a href="#">Sketches</a></li>
+                            <li><a href="#">User Flows</a></li>
+                            <li><a href="#">Design Progress</a></li>
+                            <li><a href="#">LoFi Sketches</a></li>
+                            <li><a href="#">Version 1</a></li>
+                            <li><a href="#">Usability Test</a></li>
+                            <li><a href="#">Version 2</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section id="capstone">
+                    <h3>[capstone]</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Case Study</a></li>
+                            <li><a href="#">Project</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+            </div>
+
+            <!-- images for dark mode -->
+            <div id="dark-deco">
+                <img src="images/flowerower.jpg"  alt="" class="deco-img deco-back">
+                <img src="images/thumb.jpg" alt="" class="deco-img deco-front">
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- leaves go on top of everything, absolutely pos'd -->
+    <div id="leaves"> 
+        <img src="images/flowerjason2.png" alt="" class="leaf leaf-tl">
+        <img src="images/flowerjason3.png" alt="" class="leaf leaf-br">
+    </div>
+
 </body>
 </html>
