@@ -386,8 +386,8 @@ body.switch #leaves {
 
 .leaf-tl {
     top: 100px;
-    left: 530px;
-    width: 240px;
+    left: 300px;
+    width: 180px;
     transform-origin: top left;
     transform: rotate(120deg);
 }
@@ -395,7 +395,7 @@ body.switch #leaves {
 .leaf-br {
     bottom: 0px;
     right: 100px;
-    width: 340px;
+    width: 260px;
     transform-origin: bottom right;
     transform: rotate(-30deg);
 }
