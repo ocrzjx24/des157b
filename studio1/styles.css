@@ -43,6 +43,7 @@ body {
     position: relative;
     width: 300px;
     overflow: hidden;
+    filter: blur(4px);
 }
 
 .video-wrapper video {
