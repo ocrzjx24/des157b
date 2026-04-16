@@ -44,6 +44,7 @@ body {
     width: 300px;
     overflow: hidden;
     filter: blur(4px);
+    border-radius: 10px;
 }
 
 .video-wrapper video {
