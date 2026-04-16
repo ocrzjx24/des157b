@@ -12,6 +12,7 @@
         initRipples();
     }
 
+    // handle cached video
     if (video.readyState >= 2) {
         showVideo();
     } else {
@@ -25,27 +26,53 @@
         wrapper.style.transform = `translate(${x}px, ${y}px)`;
     });
 
-    // rippling
+    // ripples courtesy jsquery script i found
     function initRipples() {
-        const $wrapper = $(".video-wrapper");
+        const $ripple = $(".ripple-layer");
 
-        try {
-            $wrapper.ripples({
-                resolution:   256,
-                perturbance:  0.03,
-                interactive:  false 
-            });
-        } catch (e) {
-            console.warn("jquery.ripples: WebGL unavailable", e);
-            return;
-        }
+        $ripple.ripples({
+            resolution:  256,
+            perturbance: 0.02,
+            dropRadius:  20,
+            interactive: false
+        });
 
-        document.addEventListener("click", function (e) {
-            const rect = wrapper.getBoundingClientRect();
+        document.querySelector(".ripple-layer").addEventListener("mousemove", function (e) {
+            const rect = this.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            $wrapper.ripples("drop", x, y, 120, 0.05);
+            $ripple.ripples("drop", x, y, 20, 0.08);
         });
     }
+
+    // lines that show up when you click
+    // random poem i thought of at 3am
+    const lines = [
+        "we find ourselves here again",
+        "familiar, comfortable",
+        "i think of my brothers",
+        "the pearl and the anchor",
+        "and i smile",
+        "'some of my favorite memories...'",
+        "'are the ones i think the least of in the moment'",
+        "a fellow feeling",
+        "something i can forever trust",
+        "however far it may seem",
+        "eventually",
+    ];
+
+    let lineIndex = 0;
+
+    document.addEventListener("click", function (e) {
+        const el = document.createElement("span");
+        el.classList.add("poem-line");
+        el.textContent = lines[lineIndex % lines.length];
+        el.style.left = e.clientX + "px";
+        el.style.top  = e.clientY + "px";
+
+        document.body.appendChild(el);
+        el.addEventListener("animationend", () => el.remove());
+        lineIndex++;
+    });
 
 })();
