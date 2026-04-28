@@ -1,73 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>check yourself!</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <title>jason's picnic day 2026</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h1>picnic day 2026.</h1>
-        <p>a timeline of questionable phone calls.</p>
-    </header>
+  <header>
+    <h1>picnic day 2026</h1>
+    <p>a timeline of questionable phone calls / texts</p>
+  </header>
 
-    <main>
-        <section class="marker-section">
-            <div class="drunk-head">
-                JX
-            </div>
-            <p>drag me!</p>
-        </section>
+  <div class="top-info">
+    <span class="jason-says">jason says:</span>
+    <span class="jason-talk">"hi guys!"</span>
+  </div>
 
-        <section class="timeline-container">
+  <main>
 
-            <div class="timeline-line"></div>
+    <section class="timeline-section">
 
-            <!-- not all the datapts yet -->
-            <div class="call-event">
-                <h2>Rahul</h2>
-                <p>11:17PM</p>
-            </div>
+      <div class="timeline-labels">
+        <span>11:00 PM</span>
+        <span>2:00 AM</span>
+      </div>
 
-            <div class="call-event">
-                <h2>Arnav</h2>
-                <p>11:31PM</p>
-            </div>
+      <div class="timeline-track">
+        <div class="timeline-fill"></div>
+        <div class="timeline-ticks"></div>
 
-            <div class="call-event">
-                <h2>Aidan</h2>
-                <p>12:04AM</p>
-            </div>
+        <div class="popup">
+            <!--
+            <img class="popup-portrait" src="images/person.png" alt="">
+            i had sketches of my friends, but i'm not super happy w them. maybe in the future
+            -->
+            <!-- directly take from json for the fields below -->
+          <h2 class="popup-name"></h2>
+          <p class="popup-time"></p>
+          <p class="popup-dialogue"></p>
+        </div>
 
-            <div class="call-event">
-                <h2>Cambria</h2>
-                <p>12:07AM</p>
-            </div>
+        <!-- draggable jason -->
+        <div class="drunk-head"><img src="images/jason1.png" alt="jx"></div>
+      </div>
 
-            <div class="call-event">
-                <h2>Johnson</h2>
-                <p>12:27AM</p>
-            </div>
+    </section>
 
-            <div class="call-event">
-                <h2>Kyle</h2>
-                <p>1:15AM</p>
-            </div>
-
-            <div class="call-event">
-                <h2>Tegan</h2>
-                <p>1:30AM</p>
-            </div>
-
-        </section>
-
-    </main>
+  </main>
 
 </body>
 </html>

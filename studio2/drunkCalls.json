@@ -1,52 +1,86 @@
 [
   {
+    "name": "",
+    "time": "11:00PM",
+    "dialogue": "Jason immediately walks to the kitchen and pours himself several shots worth of vodka."
+  },
+  {
     "name": "Rahul",
     "time": "11:17PM",
-    "time2": "12:52AM"
+    "time2": "12:52AM",
+    "dialogue": "\"don't go too crazy\"",
+    "dialogue2": "\"i- yep. still here man. you- yeah, you already said that.\""
   },
   {
     "name": "Arnav",
-    "time": "11:31PM"
-  },
-  {
-    "name": "Aidan",
-    "time": "12:04AM"
-  },
-  {
-    "name": "Cambria",
-    "time": "12:07AM"
-  },
-  {
-    "name": "Anmond",
-    "time": "12:10AM"
-  },
-  {
-    "name": "Johnson",
-    "time": "12:27AM",
-    "time2": "12:59AM"
-  },
-  {
-    "name": "Brandon",
-    "time": "12:28AM"
-  },
-  {
-    "name": "Shampave",
-    "time": "12:34AM"
-  },
-  {
-    "name": "Alex",
-    "time": "12:50AM"
+    "time": "11:31PM",
+    "dialogue": "\"hop on path of exile man\""
   },
   {
     "name": "Sechan",
-    "time": "12:58AM"
+    "time": "11:49PM",
+    "dialogue": "\"WHY ARE YOU CALLING LOL R U OK\""
+  },
+  {
+    "name": "Aidan",
+    "time": "12:04AM",
+    "dialogue": "\"uh.. if you say so.\""
+  },
+  {
+    "name": "Cambria",
+    "time": "12:07AM",
+    "dialogue": "\"party harder then!!\""
+  },
+  {
+    "name": "Anmond",
+    "time": "12:10AM",
+    "dialogue": "\"what do you mean i don't sound like anmond..?\""
+  },
+  {
+    "name": "Johnson",
+    "time": "12:26AM",
+    "time2": "12:59AM",
+    "dialogue": "\"where are you bro\"",
+    "dialogue2": "\"nah i'm heading over\""
+  },
+  {
+    "name": "Brandon",
+    "time": "12:28AM",
+    "dialogue": "\"if you need anything, let me know ok???\""
+  },
+  {
+    "name": "Shampave",
+    "time": "12:34AM",
+    "dialogue": "\"you sound like a party hardy cali girl\""
+  },
+  {
+    "name": "Christina",
+    "time": "12:44AM",
+    "dialogue": "\"LMFAO HOPE UR ALRIGHT\""
+  },
+  {
+    "name": "Alex",
+    "time": "12:50AM",
+    "dialogue": "\"go to sleep.\""
   },
   {
     "name": "Kyle",
-    "time": "1:15AM"
+    "time": "1:20AM",
+    "dialogue": "\"balls\""
+  },
+  {
+    "name": "Matthew",
+    "time": "1:28AM",
+    "dialogue": ":heart_emoji:"
   },
   {
     "name": "Tegan",
-    "time": "1:30AM"
+    "time": "1:40AM",
+    "dialogue": "\"no, YOU'RE tuff. no, YOU'RE-\""
+  },
+  {
+    "name": "",
+    "time": "2:00AM",
+    "dialogue": "Johnson graciously drops Jason off at his apartment. He immediately collapses into a deep, peaceful slumber."
   }
 ]
