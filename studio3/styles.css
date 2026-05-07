@@ -1,0 +1,265 @@
+:root {
+    --font-display: 'DM Serif Display', serif;
+    --font-mono: 'DM Mono', monospace;
+
+    --bg-dark: #0a0a0f;
+    --text-light: #f0ede8;
+    --text-muted: rgba(240, 237, 232, 0.45);
+
+    --card-width: 340px;
+    --card-height: 460px;
+
+    --perspective: 1800px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-mono);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 72px 24px 48px;
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+header .italic {
+    font-style: italic;
+    opacity: 0.65;
+}
+
+.subtitle {
+    margin-top: 16px;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    padding: 0 40px 100px;
+    min-width: 800px;
+}
+
+.card-track {
+    display: flex;
+    gap: 0;
+    padding: 80px 20px 120px;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    perspective: var(--perspective);
+    perspective-origin: 50% 40%;
+}
+
+.card-track::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    position: relative;
+
+    flex: 0 0 var(--card-width);
+    width: var(--card-width);
+    height: var(--card-height);
+
+    margin-right: -70px;
+
+    overflow: hidden;
+
+    transform: rotateY(-18deg) rotateX(6deg);
+
+    transform-style: preserve-3d;
+
+    box-shadow:
+        8px 20px 60px rgba(0,0,0,0.55),
+        0 0 0 1px rgba(255,255,255,0.06);
+
+    will-change: transform;
+
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+
+    backface-visibility: hidden;
+    contain: layout paint style;
+}
+
+.card:nth-child(even) {
+    transform: rotateY(-18deg) rotateX(6deg) translateY(20px);
+}
+
+.card-gradient {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-face {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        160deg,
+        rgba(0,0,0,0.08) 0%,
+        rgba(0,0,0,0.55) 100%
+    );
+
+    z-index: 2;
+}
+
+.card-desc {
+    display: inline-block;
+    padding: 5px 12px;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+
+    color: rgba(255,255,255,0.55);
+
+    background: rgba(255,255,255,0.1);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(6px);
+}
+
+.card-content {
+    opacity: 0;
+    transform: translateY(12px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-content h2 {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.05;
+
+    margin-bottom: 12px;
+
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.card-content p {
+    max-width: 240px;
+
+    font-size: 0.72rem;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.75);
+}
+
+.card.is-hovered {
+    z-index: 100;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,0.6),
+        0 0 0 1px rgba(255,255,255,0.18),
+        0 0 60px rgba(255,255,255,0.06) inset;
+}
+
+.card.is-hovered .card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.12) 0%,
+        rgba(255,255,255,0) 60%
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+.card.is-hovered::after {
+    opacity: 1;
+}
+
+footer {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 48px;
+
+    padding: 36px 60px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    font-size: 0.72rem;
+
+    color: var(--text-muted);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: rgba(240,237,232,0.6);
+    text-decoration: none;
+}
+
+.jason {
+    margin-left: auto;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+}
