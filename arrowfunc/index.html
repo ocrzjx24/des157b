@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+<h1>Celsius to Fahrenheit Conversion</h1>
+
+    <p>This function converts a temperature from Celsius to Fahrenheit using the standard formula AKA multiply by 9/5 then add 32. I thought of this one because of all the calculations I had to do in my science classes, and thought it'd be a nice and quick way to test arrow functions.</p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+    function cToF(celsius) {
+        return (celsius * 9/5) + 32;
+    }
+
+    //testing
+    console.log(cToF(0));   // 32
+    console.log(cToF(100)); // 212
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+    const cToF2 = function(celsius) {
+        return (celsius * 9/5) + 32;
+    };
+
+    //testing
+    console.log(cToF2(0));   // 32
+    console.log(cToF2(100)); // 212
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+    const cToF3 = (celsius) => {
+        return (celsius * 9/5) + 32;
+    };
+
+    //testing
+    console.log(cToF3(0));   // 32
+    console.log(cToF3(100)); // 212
+        </pre>
+    </code>
+
+    <footer>Jason Xie</footer>
+
+</body>
+</html>
