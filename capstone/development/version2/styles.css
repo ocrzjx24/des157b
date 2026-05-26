@@ -1,0 +1,228 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --dark: #111114;
+    --light: #a4b4c6;
+    --mute: #5a5d67;
+    --accent: #708157;
+    --dim: #394237;
+}
+
+body {
+    font-family: 'IM Fell English', serif;
+    background: var(--dark);
+    color: var(--light);
+}
+
+header, .capsule {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem;
+    text-align: center;
+}
+
+.tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+h1 em { color: var(--accent); }
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom: 0.6rem;
+}
+
+.sub {
+    font-size: 1rem;
+    color: var(--mute);
+    line-height: 1.7;
+}
+
+.spine {
+    max-width: 640px;
+    margin: 4rem auto;
+    padding: 0 2rem 4rem;
+    position: relative;
+}
+
+.spine::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: calc(2rem + 25px);
+    width: 1px;
+    background: rgba(90,93,103,0.3);
+}
+
+.entry {
+    display: flex;
+    gap: 1.8rem;
+    align-items: flex-start;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
+}
+
+.entry:last-child { margin-bottom: 0; }
+
+.dot {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1.5px solid var(--mute);
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    color: var(--mute);
+    flex-shrink: 0;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.entry:hover .dot {
+    background: var(--dot, var(--accent));
+    border-color: var(--dot, var(--accent));
+    color: var(--dark);
+    transform: scale(1.12);
+}
+
+.yr, .ttl, .auth { display: block; }
+
+.yr {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+    padding-top: 0.6rem;
+}
+
+.ttl {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+    transition: 0.2s;
+}
+
+.auth { font-size: 0.8rem; color: var(--dim); }
+
+.entry:hover .ttl { opacity: 0.75; }
+
+.rule {
+    border: none;
+    border-top: 1px solid #282b35;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rule::before {
+    content: 'your turn — the present, recorded';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--dark);
+    padding: 0 1.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.capsule { text-align: left; padding-top: 3rem; padding-bottom: 6rem; }
+
+.capsule .sub { margin: 0 0 2.5rem; }
+
+.q { margin-bottom: 2rem; }
+
+.q p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.9rem;
+}
+
+.n {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    margin-right: 0.4rem;
+    letter-spacing: 0.05em;
+}
+
+.opts { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+.opts label {
+    cursor: pointer;
+    border: 1px solid #282b35;
+    padding: 0.5rem 1.2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    color: var(--mute);
+    transition: 0.2s;
+    position: relative;
+}
+
+.opts label input[type=radio] { position: absolute; opacity: 0; width: 0; height: 0; }
+.opts label:has(input:checked) { border-color: var(--accent); color: var(--accent); background: rgba(112,129,87,0.08); }
+.opts label:hover { border-color: var(--mute); color: var(--light); }
+
+textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(139,111,71,0.35);
+    color: var(--light);
+    font-family: 'IM Fell English', serif;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.6;
+    transition: 0.2s;
+}
+
+.send {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.send button {
+    border: 1px solid var(--accent);
+    background: none;
+    color: var(--accent);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.send button:hover { background: var(--accent); color: var(--dark); }
+
+.send p { font-size: 0.78rem; color: var(--dim); line-height: 1.5; }
