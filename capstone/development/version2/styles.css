@@ -3,9 +3,9 @@
 :root {
     --dark: #111114;
     --light: #a4b4c6;
-    --mute: #5a5d67;
+    --mute: #6c707b;
     --accent: #708157;
-    --dim: #394237;
+    --dim: #3c462e;
 }
 
 html { scroll-behavior: smooth; }
@@ -52,6 +52,7 @@ h2 {
     font-size: 1rem;
     color: var(--mute);
     line-height: 1.7;
+    text-align: left;
 }
 
 .spine {
