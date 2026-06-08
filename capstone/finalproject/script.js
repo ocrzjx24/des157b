@@ -94,10 +94,10 @@ const observer = new IntersectionObserver((observed) => {
 entries.forEach(el => observer.observe(el));
 
 VanillaTilt.init(entries, {
-    max: 4,
-    speed: 600,
+    max: 15,
+    speed: 500,
     glare: true,
-    "max-glare": 0.04,
+    "max-glare": 0.08,
     perspective: 1200
 });
 
