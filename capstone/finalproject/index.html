@@ -7,19 +7,23 @@
     <title>futures past</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
+    <div class="cursor"></div>
     <header>
         <p class="tag">JASON XIE</p>
         <h1>Futures <em>Past.</em></h1>
-        <p class="sub">The year is <b>2026</b>. Smack dab in the middle of the range of speculative future eras from historically notable works of literature. Their haunting and oftentimes eerily accurate predictions grow ever prevalent with each year. So let's take a look at what they got right, and what the future might still hold.</p>
-        <p class="sub">The stories are ordered chronologically not by when they are written, but by when they take place (the year of publication sits atop each entry instead).</p>
+        <p class="sub"><b>The year is 2026.</b> For generations, writers have imagined worlds beyond their own time. Some are hopeful, some terrifying, many uncannily accurate. Today, we find ourselves in the midst of the futures these writers predicted.</p>
+        <p class="sub" style="margin-top:0.8rem;">This archive orders  speculative fiction not by when it was written, but by when it takes place, and seeks to observe and analyze each piece in regards to its accuracy with the real world.</p>
     </header>
 
     <hr class="rule">
@@ -35,16 +39,7 @@
             </div>
         </div>
 
-        <div class="entry" style="--dot: #437469;">
-            <div class="dot">1992</div>
-            <div>
-                <span class="yr">1968</span>
-                <span class="ttl">Do Androids Dream of Electric Sheep?</span>
-                <span class="auth">Philip K. Dick</span>
-            </div>
-        </div>
-
-        <div class="entry" style="--dot: #d53340;">
+        <div class="entry" style="--dot: #b6202e;">
             <div class="dot">2005</div>
             <div>
                 <span class="yr">1985</span>
@@ -53,8 +48,17 @@
             </div>
         </div>
 
+        <div class="entry" style="--dot: #437469;">
+            <div class="dot">2021</div>
+            <div>
+                <span class="yr">1968</span>
+                <span class="ttl">Do Androids Dream of Electric Sheep?</span>
+                <span class="auth">Philip K. Dick</span>
+            </div>
+        </div>
+
         <div class="entry" style="--dot: #4a6fa5;">
-            <div class="dot">2020</div>
+            <div class="dot">2027</div>
             <div>
                 <span class="yr">1992</span>
                 <span class="ttl">Snow Crash</span>
@@ -85,17 +89,53 @@
     <hr class="rule">
 
     <section class="capsule">
-        <p class="tag">TIME CAPSULE</p>
+        <p class="tag">2026</p>
         <h2>A Dispatch to the Future</h2>
-        <p class="sub">They got some things surprisingly right. Others, maybe not so much. <em>What about you?</em></p>
+        <p class="sub">"We walk into the future backwards, looking at the past and assuming that the future will be a reflection of what we already know." <em>- Bill Mead</em></p>
 
-        <form>
+        <form id="capsule-form">
 
             <div class="q">
-                <p><span class="n">01 —</span>[question goes here]</p>
-                <div class="opts">
-                    <label><input type="radio" name="q1" value="yes"> Yes</label>
-                    <label><input type="radio" name="q1" value="no"> No</label>
+                <p><span class="n">01 —</span> Which book has the most frightening future in your opinion?</p>
+                <div class="opts opts-books">
+                    <label><input type="radio" name="q1" value="Nineteen Eighty-Four"> Nineteen Eighty-Four</label>
+                    <label><input type="radio" name="q1" value="The Handmaid's Tale"> The Handmaid's Tale</label>
+                    <label><input type="radio" name="q1" value="Do Androids Dream of Electric Sheep?"> Do Androids Dream of Electric Sheep?</label>
+                    <label><input type="radio" name="q1" value="Snow Crash"> Snow Crash</label>
+                    <label><input type="radio" name="q1" value="Fahrenheit 451"> Fahrenheit 451</label>
+                    <label><input type="radio" name="q1" value="Brave New World"> Brave New World</label>
+                </div>
+            </div>
+
+            <div class="q">
+                <p><span class="n">02 —</span> If you were forced to pick one, which of these futures would you most want to live in?</p>
+                <div class="opts opts-books">
+                    <label><input type="radio" name="q2" value="Nineteen Eighty-Four"> Nineteen Eighty-Four</label>
+                    <label><input type="radio" name="q2" value="The Handmaid's Tale"> The Handmaid's Tale</label>
+                    <label><input type="radio" name="q2" value="Do Androids Dream of Electric Sheep?"> Do Androids Dream of Electric Sheep?</label>
+                    <label><input type="radio" name="q2" value="Snow Crash"> Snow Crash</label>
+                    <label><input type="radio" name="q2" value="Fahrenheit 451"> Fahrenheit 451</label>
+                    <label><input type="radio" name="q2" value="Brave New World"> Brave New World</label>
+                </div>
+            </div>
+
+            <div class="q">
+                <p><span class="n">03 —</span> Which of these do you think will experience a major crisis first?</p>
+                <div class="opts opts-books">
+                    <label><input type="radio" name="q3" value="Economy"> Global economy</label>
+                    <label><input type="radio" name="q3" value="Climate"> The climate</label>
+                    <label><input type="radio" name="q3" value="Government"> World governments (war)</label>
+                    <label><input type="radio" name="q3" value="AI"> Artificial intelligence</label>
+                </div>
+            </div>
+
+            <div class="q">
+                <p><span class="n">04 —</span> Which of these, to you, is least "human"?</p>
+                <div class="opts opts-books">
+                    <label><input type="radio" name="q4" value="AI"> Fully sentient AI</label>
+                    <label><input type="radio" name="q4" value="War Criminal"> War criminal</label>
+                    <label><input type="radio" name="q4" value="Chimpanzee"> Heightened-intelligence chimpanzee</label>
+                    <label><input type="radio" name="q4" value="Clone"> Clone of a person</label>
                 </div>
             </div>
 

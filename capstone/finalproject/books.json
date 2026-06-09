@@ -1,0 +1,92 @@
+[
+    {
+        "year": 1949,
+        "set": "1984",
+        "title": "Nineteen Eighty-Four",
+        "author": "George Orwell",
+        "tags": ["surveillance", "totalitarianism", "propaganda"],
+        "context": "The world is split into three regimes, constantly at war with one another, and the average citizen leads a life of compliance. Not necessarily because of strict law, but rather because the law is poorly defined; people are afraid to even think, in case they do break some law they are unaware of. Everyone is watched and everyone is aware of this. What is considered truth often flips on its head in a matter of hours.",
+        "main": [
+            "Mass surveillance systems and data tracking.",
+            "Misinformation and info warfare.",
+            "Language!"
+        ],
+        "analysis": "Orwell's book here is probably the most famous, and in a way now the most outdated. The technologies and governing law presented are outlandish, but the most important elements are the focus on how institutions weaponize language, memory, and supposed surveillance. They aim to use tech to replace God, in a way. Imagine a world where you can't even think about what you want, because you don't know if the government might be able to read your mind. Anyways, remember: just because the year has passed doesn't mean we avoided his predictions.",
+        "template": "orwell"
+    },
+    {
+        "year": 1985,
+        "set": "2005",
+        "title": "The Handmaid's Tale",
+        "author": "Margaret Atwood",
+        "tags": ["theocracy", "reproductive rights", "gender"],
+        "context": "A theocratic regime has replaced America after ecological collapse and declining birth rates. Women's reproductive autonomy is stripped away and turned into a device; based on fertility and age, women are reorganized into rigid social roles enforced through doctrine and strongarming.",
+        "main": [
+            "Total control over reproductive rights and healthcare.",
+            "Religious and ideological movements that influence government.",
+            "Cognitive dissonance."
+        ],
+        "analysis": "Atwood extrapolates from existing historical patterns of religious governance, gender control, and political instability. The book isn't a prophecy, and maybe not even a warning; it compiles real practices in the real world, pushed to the extreme. Governments ruled through religion but by the arguably non-religious; patriarchies that reduce women and mothers to objects; corruption and humanity behind the scenes of it all. We think we're far away from the practices depicted in the novel but, are we really?",
+        "template": "handmaid"
+    },
+    {
+        "year": 1968,
+        "set": "2021",
+        "title": "Do Androids Dream of Electric Sheep?",
+        "author": "Philip K. Dick",
+        "tags": ["AI", "empathy", "identity"],
+        "context": "Earth is devastated by global nuclear war, resulting in political and environmental collapse, as well as the extinction of most animals (as such, people own electric versions). Animals aren't the only thing replicated, however; artificial humans (androids) are nearly indistinguishable from humans, raising questions about empathy and moral status. Are they, or are they not people, too?",
+        "main": [
+            "Artificial intelligence advanced to a degree of very convincing naturalism.",
+            "Intense environmental degradation, such that people go to off-world colonies.",
+            "Questions about self. How do I know I'm not a robot?"
+        ],
+        "analysis": "What does it mean to be human? That's the main point Dick explores in this book. The main character at times struggles with this himself, with it ultimately being left ambiguous. In an age where AI truly is getting more and more realistic by the month, we have to start asking ourselves questions about 'android rights,' and how <em>we</em> define humanity.",
+        "template": "androids"
+    },
+    {
+        "year": 1992,
+        "set": "2027",
+        "title": "Snow Crash",
+        "author": "Neal Stephenson",
+        "tags": ["metaverse", "capitalism", "internet"],
+        "context": "In a hyper-commercialized future where governments have weakened and corporations are the dominant power, people spend significant time in a shared virtual reality called the Metaverse. They escape from a reality that exists purely for capital gain.",
+        "main": [
+            "Virtual worlds and online economies -- the book coined the term 'metaverse' and 'avatar' (in virtual reality and game contexts).",
+            "Extreme corporate influence over architecture.",
+            "Everything is for money, and only money."
+        ],
+        "analysis": "Stephenson wrote the novel as a sort of 'window into tomorrow,' imagining a world that is mere steps away. He blends cyberpunk aesthetics with a heavy emphasis on dead languages to build this anachronistic world of old and new. The novel's key insight is that language, systems, and networks can behave like viruses shaping human behavior; the author himself was surprised to see how much of what he wrote ended up being relevant in the modern day.",
+        "template": "snowcrash"
+    },
+    {
+        "year": 1953,
+        "set": "2052",
+        "title": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "tags": ["censorship", "distraction", "entertainment"],
+        "context": "A society where books are banned and the role of 'firemen' has changed from putting out fires to starting them. They burn literature to keep anyone from thinking too hard, maintaining a world where attention spans are short and instant-gratification entertainment is king.",
+        "main": [
+            "Digital media ecosystems that prioritize speed and bombardment of stimuli.",
+            "Censorship of media that provokes thought.",
+            "\"Social harmony.\""
+        ],
+        "analysis": "Bradbury's story critiques distraction more than censorship. He had envisioned that while authority can rule with iron fists, it can also come in the form of entertainment; things to distract the people from the truth of the world. The novel had anticipated attention fragmentation and the cultural shift toward constant stimulation, and in this day and age, his predictions often ring truer than people would like. Maybe you should pick up a book tomorrow.",
+        "template": "f451"
+    },
+    {
+        "year": 1932,
+        "set": "2540",
+        "title": "Brave New World",
+        "author": "Aldous Huxley",
+        "tags": ["class system", "conditioning", "eugenics"],
+        "context": "A technologically-advanced society, engineered for stability and happiness. Citizens are biologically engineered, sorted into castes, and trained from birth to accept their roles. Pleasure and chemical mood regulation replace conflict and individuality; happiness is the only acceptable emotion.",
+        "main": [
+            "Genetic engineering and reproductive tech, totally eradicating the concept of marriage.",
+            "A drug called 'Soma' that maintains mood.",
+            "Everyone is a cog in the machine. Even if they are aware, they don't care."
+        ],
+        "analysis": "Huxley feared not oppression through pain, but control through pleasure; a people that were not compelled to change the society they were oppressed by because they could not know better and were comfortable in their state. It's intriguing to think that his book is the oldest on this list, yet it depicted the future furthest ahead <em>and</em>, to many, most accurate. His story remains a lasting question on whether engineered happiness is still genuine happiness.",
+        "template": "bnw"
+    }
+]
